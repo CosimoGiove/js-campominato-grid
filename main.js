@@ -8,24 +8,41 @@ mi creo all'interno della mia funzione un elemento div, e lo appendo al mio file
 mi creo un elemento numero lo appendo al mio div
 attraverso un ciclo for gli assegno gli elmenti della funzione.*/
 
+/* function*/
+
+function creazioneElemento(griglia, classname, contenuto) {
+    const elemento = document.createElement(griglia);
+    elemento.classList.add(classname);
+    elemento.append(contenuto);
+
+    return elemento
+}
+
+/* function*/
+
 const btn = document.querySelector(".btn")
 console.log(btn);
 
 
 btn.addEventListener("click", function () {
     console.log("ciao")
-    const  NewGriglia = creazioneelemento("div","cella","containergioco")
-    console.log(NewGriglia)
+   
+    const containergioco = document.querySelector(".containergioco")
+    console.log(containergioco);
+    for (let i = 1; i <= 100; i++) {
 
+        const NewGriglia = creazioneElemento("div", "cella", i)
+        console.log(NewGriglia)
+        containergioco.append(NewGriglia);
+    }
+    
 })
 
-function creazioneelemento(griglia,classname,contenuto) {
-    const elemento = document.createElement(griglia);
-    elemento
 
 
-    return elemento
-}
+
+
+
 
 
 

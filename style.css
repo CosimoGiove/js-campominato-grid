@@ -57,3 +57,26 @@ ul li{
     font-size: 10px;
 }
 
+.cella{
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    background-color: #7fffd4;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.containergioco{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+    width: 600px;
+    margin: 0 auto;
+    padding: 45px;
+}
+
+.display{
+    display:none
+}
