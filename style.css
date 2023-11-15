@@ -77,6 +77,12 @@ ul li{
     padding: 45px;
 }
 
-.display{
-    display:none
+
+.color{
+    background-color: blue;
+}
+
+.reset{
+    margin-right: 20px;
+    width: 100px;
 }

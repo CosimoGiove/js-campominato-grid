@@ -23,20 +23,38 @@ function creazioneElemento(griglia, classname, contenuto) {
 const btn = document.querySelector(".btn")
 console.log(btn);
 
-
+// evento onclick sul bottone play//
 btn.addEventListener("click", function () {
     console.log("ciao")
-   
+
     const containergioco = document.querySelector(".containergioco")
     console.log(containergioco);
     for (let i = 1; i <= 100; i++) {
-
+        //creazione delle celle del gioco//
         const NewGriglia = creazioneElemento("div", "cella", i)
         console.log(NewGriglia)
         containergioco.append(NewGriglia);
+        //evento click sulle caselle e aggiuta della classe color //
+        NewGriglia.addEventListener("click", function () {
+            NewGriglia.classList.add("color")
+            console.log(" ho cliccato la cella numero :", i)
+        })
+
     }
-    
+    //disabilito il pulsante di gioco //
+    btn.disabled = true
+
 })
+//tasto di reset del gioco
+
+const reset = document.querySelector(".reset")
+reset.addEventListener("click", function () {
+    location.reload()
+})
+
+
+
+
 
 
 
